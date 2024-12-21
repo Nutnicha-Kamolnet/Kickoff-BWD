@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../Kickoff-BWD/css/aanbod.css">
     <link rel="stylesheet" href="../Kickoff-BWD/css/detail.css">
     <link rel="stylesheet" href="../Kickoff-BWD/css/contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Contact</title>
 </head>
 <body>
@@ -21,12 +22,44 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aanbod.html">Aanbod</a></li>
                     <li><a href="detail.html">Detail</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
+        <h2 id="contact_us">Get in Touch</h2>
+        <div id="contact">
+            <form class="contact_form">
+                <p>
+                    <label for="inpName">Naam: *</label>
+                    <input type="text" id="inpName" required placeholder="e.g. John Doe">
+                 </p>
+                 <p>
+                    <label for="inpEmail">Email: *</label>
+                    <input type="email" id="inpEmail" required placeholder="e.g. johndoe@sky.net">
+                 </p>
+                 <p>
+                    <label for="inpSubject">Uw Onderwerp:</label>
+                    <input type="text" id="inpSubject" required placeholder="Onderwerp...">
+                 </p>
+                 <p>
+                    <label for="inpMessage">Bericht:</label>
+                    <textarea id="inpMessage" required></textarea>
+                 </p>
+                 <p>
+                    <button type="submit" class="btn-cta">verzenden</button>
+                 </p>
+            </form>
+            <div class="addres">
+                <h3>Odisee</h3>
+                <p>Kwalestraat 154</p>
+                <p>9320 Aalst</p>
+                <p><i class="material-icons">call</i> 053-72 71 70</p>
+                <p><i class="material-icons">mail</i>info.aalst@odisee.be</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1257.284622692373!2d4.022816500507388!3d50.9316848525973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3bd4d493ed2af%3A0xe01adf0bdf5be3d6!2sKwalestraat%20154%2C%209320%20Aalst!5e0!3m2!1snl!2sbe!4v1734790239924!5m2!1snl!2sbe" title="odisee" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
     </main>
     <footer>
