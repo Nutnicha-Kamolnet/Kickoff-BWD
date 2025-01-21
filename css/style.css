@@ -255,3 +255,8 @@ footer .social_icons {
 /*  --- Detail.html --- */
 
 /*  --- Contact.html --- */
+
+
+p {
+    line-height: 1.2;
+}
