@@ -18,6 +18,24 @@ h1 .h1color {
     color: #fff;
 }
 
+h2 {
+    position: relative;
+    font-size: 2em; /* Pas dit aan naar wens */
+    color: #fff; /* Witte tekstkleur */
+    text-align: left; /* Uitlijning, pas aan naar behoefte */
+    margin-bottom: 20px;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Plaatsing van de lijn onder de tekst */
+    left: -45px;
+    width: 60px; /* Breedte van de lijn */
+    height: 3px; /* Dikte van de lijn */
+    background: linear-gradient(to right, #c70039, #ff5733); /* Gradientkleur */
+}
+
 /*  --- Index.html --- */
 header .wrapper,
 main .wrapper,
