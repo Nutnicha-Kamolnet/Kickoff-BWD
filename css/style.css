@@ -230,6 +230,10 @@ nav ul li a.active::after {
    vertical-align: middle;
 }
 
+figure .profiel_foto {
+   padding: 20px 40px;
+}
+
 /* footer */
 footer small {
     color: #ff4632;
