@@ -9,9 +9,15 @@ body {
     padding: 0;
 }
 
+p {
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
 h1 {
     color: #ff4632;
-    font-size: 32px;
+    font-size: 40px;
 }
 
 h1 .h1color {
@@ -20,7 +26,7 @@ h1 .h1color {
 
 h2 {
     position: relative;
-    font-size: 2em; /* Pas dit aan naar wens */
+    font-size: 30px; /* Pas dit aan naar wens */
     color: #fff; /* Witte tekstkleur */
     text-align: left; /* Uitlijning, pas aan naar behoefte */
     margin-bottom: 20px;
@@ -36,6 +42,23 @@ h2::after {
     background: linear-gradient(to right, #c70039, #ff5733); /* Gradientkleur */
 }
 
+h3 {
+    color: #ff4632;
+}
+
+h4 {
+    color: #fff;
+    font-weight: 400;
+}
+
+ul {
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.4;
+    list-style: none;
+    padding: 0;
+}
+
 /*  --- Index.html --- */
 header .wrapper,
 main .wrapper,
@@ -47,7 +70,7 @@ footer .wrapper {
 }
 
 .topbar {
-    align-items: flex-end;
+    align-items: first baseline;
     display: flex;
     justify-content: space-between;
     min-width: 1000px;
@@ -199,7 +222,19 @@ nav ul li a.active::after {
     background: #CB0639;
 }
 
+.profiel {
+   max-width: 100px;
+   border-radius: 50%;
+   height: auto;
+   margin: 0 auto;
+   vertical-align: middle;
+}
+
 /* footer */
+footer small {
+    color: #ff4632;
+}
+
 footer .social_icons {
     align-items: center;
     display: flex;
@@ -208,6 +243,7 @@ footer .social_icons {
  }
  
  footer .social_icons ul {
+    color: #ff4632;
     display: flex;
     gap: 15px;
     list-style: none;
