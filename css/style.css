@@ -19,7 +19,9 @@ h1 .h1color {
 }
 
 /*  --- Index.html --- */
-header .wrapper {
+header .wrapper,
+main .wrapper,
+footer .wrapper {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 1000px;
@@ -178,6 +180,21 @@ nav ul li a.active::after {
 #radio3:checked ~ .navigation-auto .auto-btn3 {
     background: #CB0639;
 }
+
+/* footer */
+footer .social_icons {
+    align-items: center;
+    display: flex;
+    grid-column: 3 / 4;
+    justify-content: end;
+ }
+ 
+ footer .social_icons ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+ }
 
 /*  --- Aanbod.html --- */
 
