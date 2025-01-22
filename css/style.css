@@ -308,6 +308,9 @@ footer .social_icons {
     flex-direction: column; /* Verticale indeling voor de linker sectie */
     flex: 2; /* Laat de linker sectie meer ruimte innemen */
     max-width: 50%;
+}
+
+.left-section h3 {
     margin: 20px 0 0 0;
 }
 
