@@ -233,15 +233,22 @@ nav ul li a.active::after {
     margin: 40px 0;
 }
 
+.members {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
 blockquote {
     margin: 40px 0 40px 0;
+    text-align: center;
 }
 
 .profiel {
    max-width: 100px;
    border-radius: 50%;
    height: auto;
-   margin: 20px;
+   margin: 50px;
    vertical-align: middle;
 }
 
@@ -275,13 +282,13 @@ footer .social_icons {
 
 .cursus_aanbod {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Twee kolommen van gelijke breedte */
-    gap: 20px; /* Optioneel: voeg ruimte toe tussen de kolommen */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
     margin: 40px 0;
 }
 
 .cursus_aanbod > div {
-    display: contents; /* Zorgt ervoor dat h3 en ul werken in het grid */
+    display: contents; 
 }
 
 .cursus_aanbod h3 {
@@ -295,18 +302,18 @@ footer .social_icons {
 /*  --- Detail.html --- */
 
 .cursus_detail {
-    display: flex; /* Horizontale indeling */
-    justify-content: space-between; /* Items links en rechts uitlijnen */
-    align-items: flex-start; /* Bovenaan uitlijnen */
-    gap: 40px; /* Ruimte tussen links en rechts */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 40px; 
     margin: 40px 0;
 }
 
 .left-section {
     display: flex;
-    flex-direction: column; /* Verticale indeling voor de linker sectie */
-    flex: 2; /* Laat de linker sectie meer ruimte innemen */
-    max-width: 50%;
+    flex-direction: column; 
+    flex: 2; 
+    max-width: 55%;
 }
 
 .left-section h3 {
@@ -314,63 +321,63 @@ footer .social_icons {
 }
 
 .right-section {
-    flex: 1; /* Laat de rechter sectie minder ruimte innemen */
+    flex: 1; 
 }
 
 .contact-form,
 .contact_form  {
     display: flex;
-    flex-direction: column; /* Stapel labels en inputvelden verticaal */
-    gap: 15px; /* Ruimte tussen de formulierelementen */
-    width: 100%; /* Zorgt dat het formulier de beschikbare breedte benut */
+    flex-direction: column; 
+    gap: 15px; 
+    width: 100%; 
 }
 
 .contact-form p,
 .contact_form p {
     display: flex;
-    flex-direction: column; /* Label boven inputveld */
-    margin: 0; /* Verwijder standaard marges */
+    flex-direction: column; 
+    margin: 0; 
 }
 
 .contact-form label,
 .contact_form label {
-    font-size: 16px; /* Optioneel: lettergrootte van het label */
-    margin: 20px 0 10px 0; /* Ruimte tussen het label en het inputveld */
+    font-size: 16px; 
+    margin: 20px 0 10px 0; 
 }
 .contact-form input,
 .contact_form input,
 .contact-form textarea,
 .contact_form textarea {
-    width: 70%; /* Zorg dat alle velden dezelfde breedte hebben */
-    max-width: 400px; /* Optionele maximale breedte */
-    padding: 8px; /* Ruimte binnen de inputvelden */
-    font-size: 14px; /* Optionele tekstgrootte */
-    border: 1px solid #ccc; /* Lichte rand voor inputvelden */
-    border-radius: 5px; /* Maak randen licht afgerond */
-    box-sizing: border-box; /* Houd rekening met padding bij breedte */
+    width: 70%; 
+    max-width: 400px; 
+    padding: 8px; 
+    font-size: 14px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box;
 }
 
 .contact-form textarea,
 .contact_form textarea {
-    resize: none; /* Optioneel: Voorkom dat gebruikers de grootte aanpassen */
-    height: 100px; /* Specifieke hoogte voor de textarea */
+    resize: none; 
+    height: 100px; 
 }
 
 .contact-form button,
 .contact_form button{
-    width: 25%; /* Laat de knop een automatische breedte hebben */
-    padding: 10px 20px; /* Ruimte binnen de knop */
-    font-size: 16px; /* Tekengrootte van de knop */
-    color: #fff; /* Witte tekst */
-    background-color: #ff4632; /* Knopkleur */
-    border: none; /* Verwijder standaard rand */
-    border-radius: 5px; /* Maak de knop licht afgerond */
-    cursor: pointer; /* Geef een handje-icoon bij hover */
+    width: 120px;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    color: #fff; 
+    background-color: #ff4632; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
 }
 
 .contact-form button:hover,
 .contact_form button:hover {
-    background-color: #e03d28; /* Donkere kleur bij hover */
+    background-color: #e03d28; 
 }
 
 /*  --- Contact.html --- */
