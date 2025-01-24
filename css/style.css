@@ -405,3 +405,12 @@ iframe {
     grid-column: span 2;
     margin: 40px 0;
 }
+
+.partner {
+    height: 100px;
+    display: flex;
+    opacity: 80%;
+    gap: 10px;
+    max-width: 100%;
+
+}
