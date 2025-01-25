@@ -34,7 +34,7 @@ h1 .h1color {
 
 h2 {
     position: relative;
-    font-size: 30px; /* Pas dit aan naar wens */
+    font-size: 35px; /* Pas dit aan naar wens */
     color: #fff; /* Witte tekstkleur */
     text-align: left; /* Uitlijning, pas aan naar behoefte */
     margin: 50px 0 50px 0;
@@ -53,11 +53,13 @@ h2::after {
 h3 {
     color: #ff4632;
     margin: 0 0 20px 0;
+    font-size: 25px;
 }
 
 h4 {
     color: #fff;
-    font-weight: 400;
+    font-weight: 600;
+    line-height: 30px
 }
 
 ul {
@@ -70,7 +72,7 @@ ul {
 
 /*  --- Index.html --- */
 header .wrapper,
-main .wrapper,
+main .wrapper, 
 footer .wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -291,7 +293,7 @@ footer .social_icons {
     display: contents; 
 }
 
-.cursus_aanbod h3 {
+.cursus_aanbod h3, p {
     grid-column: 1 / 2; /* Eerste kolom */
 }
 
@@ -309,7 +311,7 @@ footer .social_icons {
     margin: 40px 0;
 }
 
-.left-section {
+/* .left-section {
     display: flex;
     flex-direction: column; 
     flex: 2; 
@@ -318,11 +320,11 @@ footer .social_icons {
 
 .left-section h3 {
     margin: 20px 0 0 0;
-}
+} */
 
-.right-section {
+/* .right-section {
     flex: 1; 
-}
+} */
 
 .contact-form,
 .contact_form  {
@@ -330,6 +332,8 @@ footer .social_icons {
     flex-direction: column; 
     gap: 15px; 
     width: 100%; 
+    margin-bottom: 30px;
+
 }
 
 .contact-form p,
@@ -413,4 +417,48 @@ iframe {
     gap: 10px;
     max-width: 100%;
 
+}
+
+
+
+
+
+.blog {
+    display: flex;
+    gap: 20px;
+
+}
+
+
+
+.tags {
+    font-style: italic;
+    font-size: 12px;
+    
+    
+}
+
+
+.button {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 8px;
+    color: black;
+    display: inline-block;
+    /* zonder deze regel werken paddings niet goed */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 10px 0px;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.831);
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
