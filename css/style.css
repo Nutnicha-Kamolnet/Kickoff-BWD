@@ -10,7 +10,7 @@ body {
     background: #232531;
     display: block;
     height: 100vh;
-    font-family: "Roboto Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-family: "Roboto Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ p {
     color: #fff;
     font-weight: 300;
     line-height: 1.4;
-    margin: 0 0 20px 0;
+    margin: 0 0 50px 0;
 }
 
 h1 {
@@ -81,7 +81,7 @@ footer .wrapper {
 }
 
 .topbar {
-    align-items: first baseline;
+    align-items: flex-end;
     display: flex;
     justify-content: space-between;
     min-width: 1000px;
@@ -95,7 +95,7 @@ footer .wrapper {
     justify-items: center;
 }
 
-
+/* Navigatie */
 
 nav ul {
     display: flex;
@@ -107,7 +107,6 @@ nav ul {
  }
 
  nav ul li a {
-    /* padding: 10px 0px; */
     position: relative;
     color: #fff;
     text-decoration: none;
@@ -117,14 +116,14 @@ nav ul {
  nav ul li a::after {
     content: "";
     position: absolute;
-    bottom: -5px; /* Plaats het pseudo-element aan de onderkant */
+    bottom: -5px; 
     left: 0;
     width: 100%;
-    height: 2px; /* Dikte van de "border" */
+    height: 2px; 
     background: linear-gradient(to right, #c70039, #ff5733 70%);
-    transform: scaleX(0); /* Begin met een onzichtbare lijn */
-    transform-origin: left; /* Lijn start van links */
-    transition: transform 0.3s ease; /* Animatie-effect */
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.3s ease; 
 }
 
 nav ul li a:hover {
@@ -132,11 +131,11 @@ nav ul li a:hover {
 }
 
 nav ul li a:hover::after {
-    transform: scaleX(1); /* Laat de lijn volledig zichtbaar worden */
+    transform: scaleX(1); 
 }
 
 nav ul li a.active {
-    color: #CB0639; /* Zelfde kleur als bij hover */
+    color: #CB0639; 
 }
 
 nav ul li a.active::after {
@@ -145,9 +144,9 @@ nav ul li a.active::after {
     bottom: -5px;
     left: 0;
     width: 100%;
-    height: 2px; /* Dikte van de "onderstreping" */
+    height: 2px; 
     background: linear-gradient(to right, #c70039, #ff5733 70%);
-    transform: scaleX(1); /* Zorg ervoor dat de lijn volledig zichtbaar is */
+    transform: scaleX(1); 
     transform-origin: left;
 }
 
@@ -233,12 +232,17 @@ nav ul li a.active::after {
 
 .welkom {
     margin: 40px 0;
+    width: 1000px;
+}
+
+.welkom ul {
+    margin: 40px 0;
 }
 
 .members {
     display: flex;
     flex-direction: row;
-    gap: 100px;
+    justify-content: space-evenly;
 }
 
 blockquote {
@@ -255,6 +259,11 @@ blockquote {
 }
 
 /* footer */
+
+footer .wrapper {
+    padding: 20px 0; 
+}
+
 footer small {
     color: #ff4632;
 }
@@ -270,6 +279,7 @@ footer .social_icons {
     color: #ff4632;
     display: flex;
     gap: 15px;
+    font-size: 24px;
     list-style: none;
     padding: 0;
  }
@@ -277,7 +287,6 @@ footer .social_icons {
 /*  --- Aanbod.html --- */
 
 .intro_img {
-    /* border-radius: 10px; */
     margin: 20px 0 40px 0;
     width: 1024px;
 }
@@ -308,23 +317,15 @@ footer .social_icons {
     justify-content: space-between; 
     align-items: flex-start; 
     gap: 40px; 
+    margin: 40px;
+}
+
+#cursus1,
+#cursus2,
+#cursus3,
+#cursus4 {
     margin: 40px 0;
 }
-
-/* .left-section {
-    display: flex;
-    flex-direction: column; 
-    flex: 2; 
-    max-width: 55%;
-}
-
-.left-section h3 {
-    margin: 20px 0 0 0;
-} */
-
-/* .right-section {
-    flex: 1; 
-} */
 
 .contact-form,
 .contact_form  {
@@ -348,6 +349,8 @@ footer .social_icons {
     font-size: 16px; 
     margin: 20px 0 10px 0; 
 }
+
+.contact-form select,
 .contact-form input,
 .contact_form input,
 .contact-form textarea,
@@ -361,27 +364,40 @@ footer .social_icons {
     box-sizing: border-box;
 }
 
+.contact-form select {
+    width: 400px;
+}
+
 .contact-form textarea,
 .contact_form textarea {
     resize: none; 
     height: 100px; 
 }
 
+.button,
 .contact-form button,
 .contact_form button{
-    width: 120px;
-    padding: 10px 20px; 
-    font-size: 16px; 
-    color: #fff; 
-    background-color: #ff4632; 
-    border: none; 
+    display: inline-block;
+    color: #ff5733; 
+    background-color: #232531; 
+    border: 2px solid #3f4046;
     border-radius: 5px; 
     cursor: pointer; 
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 10px 0px;
 }
 
+.button:hover,
 .contact-form button:hover,
 .contact_form button:hover {
-    background-color: #e03d28; 
+    background-color: #232531; 
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
 /*  --- Contact.html --- */
@@ -411,54 +427,42 @@ iframe {
 }
 
 .partner {
-    height: 100px;
+    min-height: 100px;
     display: flex;
-    opacity: 80%;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
     max-width: 100%;
-
+    margin: 40px auto;
 }
-
-
-
-
 
 .blog {
     display: flex;
     gap: 20px;
-
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
+.bloginhoud {
+    text-align: center; 
+    max-width: 300px; 
+}
 
+.bloginhoud img {
+    width: 100%; 
+    border-radius: 10px; 
+}
+
+.blog1:hover,
+.blog2:hover,
+.blog3:hover {
+    transform: scale(1.05); /* Vergroot de afbeelding iets */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Voeg een soepele overgang toe */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Voeg een schaduw toe */
+}
 
 .tags {
     font-style: italic;
-    font-size: 12px;
-    
-    
-}
-
-
-.button {
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.55);
-    border: 1px solid rgba(255, 255, 255, 0.55);
-    border-radius: 8px;
-    color: black;
-    display: inline-block;
-    /* zonder deze regel werken paddings niet goed */
-    font-size: 16px;
-    font-weight: 500;
-    padding: 12px 25px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin: 10px 0px;
-}
-
-.button:hover {
-    background-color: rgba(255, 255, 255, 0.831);
-    color: black;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    font-size: 12px;  
 }

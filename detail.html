@@ -60,7 +60,7 @@
                         <p>10:00 - 17:00</p>
                     </div>
                 </div> -->
-            <div id="cursus1">
+            <div class="cursus1">
 
                 <h3 id="cursus1">Systeem- en netwerkbeheer &#40;Odisee&#41;</h3>
                 <p class="tags">Systeembeheer, netwerkbeheer, netwerk, data, beveiliging</p>
@@ -104,6 +104,7 @@
                     jaar /
                     120 studiepunten&#41;
                 </p>
+                <a href="detail.html#contact" class="button">inschrijven</a>
             </div>
 
             <div id="cursus2">
@@ -168,6 +169,7 @@
                     &#40;4 jaar /
                     120 studiepunten&#41;
                 </p>
+                <a href="detail.html#contact" class="button">inschrijven</a>
             </div>
             <div id="cursus3">
 
@@ -187,12 +189,12 @@
                     probleemoplossend denken en samenwerken.
                 </p>
                 <p>
-                    Art & Design focust op het creatieve luik van digitaal en grafisch ontwerpen. Hier leer je
+                    Art &amp; Design focust op het creatieve luik van digitaal en grafisch ontwerpen. Hier leer je
                     ook hoe je
                     user interface design, motion graphics, video en interactieve graphics kan inschakelen.
                 </p>
                 <p>
-                    Bij Development & Technology maak je kennis met de technische aspecten van digitaal en
+                    Bij Development &amp; Technology maak je kennis met de technische aspecten van digitaal en
                     grafisch
                     ontwerpen. Veel verschillende aspecten komen aan bod; zoals informatiearchitectuur, coderen
                     in HTML en
@@ -203,7 +205,7 @@
                     samenwerken.
                 </p>
                 <p>
-                    Bij Business & Communication draait alles rond de kennis die je nodig hebt om vlot mee te
+                    Bij Business &amp; Communication draait alles rond de kennis die je nodig hebt om vlot mee te
                     draaien in je
                     toekomstige werksector. Hier ligt de focus op je professionele vaardigheden, de gangbare
                     digitale tools,
@@ -230,7 +232,7 @@
                 <p>Beschikbare plaatsen&#58; 18/30</p>
                 <p>Tijdsperiode&#58; Dagonderwijs met een normale duurtijd van 2 jaar of 2,5jaar. 120
                     studiepunten</p>
-
+                <a href="detail.html#contact" class="button">inschrijven</a>
             </div>
             <div id="cursus4">
                 <h3>Internet of things &#40;AP Hogeschool&#41;</h3>
@@ -275,7 +277,6 @@
                     openbare
                     diensten, het onderwijs ... zijn maar een greep uit het aanbod.
                 </p>
-
                 <p>
                     Of heb je de smaak van het studeren te pakken? Dan kan je kiezen voor een vervolgtraject
                     aan AP.
@@ -283,7 +284,7 @@
                     de
                     nauwe samenwerking met de IT-bacheloropleidingen is een optimale doorstroom mogelijk. Na
                     een
-                    vervolgtraject behaal je in twee jaar een bachelordiploma in het traject IT & Internet
+                    vervolgtraject behaal je in twee jaar een bachelordiploma in het traject IT &amp; Internet
                     of Things van
                     de
                     opleiding Elektronica-ICT.
@@ -292,10 +293,10 @@
                 <p>Plaats&#58; Antwerpen, provincie Antwerpen</p>
                 <p>Beschikbare plaatsen&#58; 18/20</p>
                 <p>Dagonderwijs met een duurtijd van 2jaar &#40;semestersysteem&#41;</p>
+                <a href="detail.html#contact" class="button">inschrijven</a>
             </div>
-
-
             <div>
+                <div id="contact"></div>
                 <h2 class="section-title">Inschrijven voor de cursus</h2>
                 <p>Fijn dat je wilt inschrijven aan onze co-hogeschool! Dit doe je gewoon online van thuis
                     uit. </p>
@@ -305,31 +306,33 @@
                     tijd om
                     jouw succesvolle start voor te bereiden.</p>
                 <p>We helpen je graag verder! Onderaan deze pagina vind je hoe je ons kan contacteren. </p>
-                <div class="formulier">
-                    <form class="contact-form">
-                        <p>
-                            <label for="inpName">Naam: *</label>
-                            <input type="text" id="inpName" name="name" required placeholder="e.g. John Doe">
-                        </p>
-                        <p>
-                            <label for="inpEmail">Email: *</label>
-                            <input type="email" id="inpEmail" name="email" required placeholder="e.g. johndoe@sky.net">
-                        </p>
-                        <p>
-                            <label for="inpName">Cursus: *</label>
-                            <input type="text" id="inpClass" name="class" required placeholder="e.g. Programmeren">
-                        </p>
-                        <p>
-                            <label for="inpMessage">Bericht of vragen:</label>
-                            <textarea id="inpMessage" name="message" placeholder="Je vraag..."></textarea>
-                        </p>
-                        <p>
-                            <button type="submit" class="btn-cta">Inschrijven</button>
-                        </p>
-                    </form>
-                </div>
+                <form class="contact-form">
+                    <p>
+                        <label for="inpName">Naam: *</label>
+                        <input type="text" id="inpName" name="name" required placeholder="e.g. John Doe">
+                    </p>
+                    <p>
+                        <label for="inpEmail">Email: *</label>
+                        <input type="email" id="inpEmail" name="email" required placeholder="e.g. johndoe@sky.net">
+                    </p>
+                    <p>
+                        <label for="inpName">Cursus: *</label>
+                        <select id="cursus" name="inpName" title="Selecteer een cursus">
+                            <option value="cursus1">Systeem- en netwerkbeheer</option>
+                            <option value="cursus2">Programmeren</option>
+                            <option value="cursus3">Digitale vormgeving</option>
+                            <option value="cursus4">Internet of things</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="inpMessage">Bericht of vragen:</label>
+                        <textarea id="inpMessage" name="message" placeholder="Je vraag..."></textarea>
+                    </p>
+                    <p>
+                        <button type="submit" class="btn-cta">Inschrijven</button>
+                    </p>
+                </form>
             </div>
-        </div>
         </div>
     </main>
     <footer>
