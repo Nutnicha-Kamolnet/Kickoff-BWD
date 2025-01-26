@@ -441,7 +441,11 @@ iframe {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin: 20px 0; 
+}
+
+.blog a {
+    text-decoration: none;
 }
 
 .bloginhoud {
