@@ -1,0 +1,468 @@
+* {
+    /* Reset Browser */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+body {
+    align-items: center;
+    background: #232531;
+    display: block;
+    height: 100vh;
+    font-family: "Roboto Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 0 0 50px 0;
+}
+
+h1 {
+    color: #ff4632;
+    font-size: 40px;
+}
+
+h1 .h1color {
+    color: #fff;
+}
+
+h2 {
+    position: relative;
+    font-size: 35px; /* Pas dit aan naar wens */
+    color: #fff; /* Witte tekstkleur */
+    text-align: left; /* Uitlijning, pas aan naar behoefte */
+    margin: 50px 0 50px 0;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Plaatsing van de lijn onder de tekst */
+    left: -45px;
+    width: 60px; /* Breedte van de lijn */
+    height: 3px; /* Dikte van de lijn */
+    background: linear-gradient(to right, #c70039, #ff5733); /* Gradientkleur */
+}
+
+h3 {
+    color: #ff4632;
+    margin: 0 0 20px 0;
+    font-size: 25px;
+}
+
+h4 {
+    color: #fff;
+    font-weight: 600;
+    line-height: 30px
+}
+
+ul {
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.4;
+    list-style: none;
+    padding: 0;
+}
+
+/*  --- Index.html --- */
+header .wrapper,
+main .wrapper, 
+footer .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.topbar {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    min-width: 1000px;
+}
+
+.topbar .logo {
+    position: relative;
+    height: auto;
+    margin: 20px 0px 40px 0px;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Navigatie */
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+    text-decoration: none;
+    padding: 0 0 25px 0;
+ }
+
+ nav ul li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+ }
+
+ nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background: linear-gradient(to right, #c70039, #ff5733 70%);
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.3s ease; 
+}
+
+nav ul li a:hover {
+    color: #CB0639;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); 
+}
+
+nav ul li a.active {
+    color: #CB0639; 
+}
+
+nav ul li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background: linear-gradient(to right, #c70039, #ff5733 70%);
+    transform: scaleX(1); 
+    transform-origin: left;
+}
+
+/* Slideshow gallery */
+
+.slider{
+   aspect-ratio: 16 / 9;
+   margin: auto;
+   max-width: 1024px;
+   overflow: hidden;
+   position: relative;
+   width: 100%;
+}
+
+.slides{
+   display: flex;
+   height: 100%;
+   transition: all 0.5s ease-in-out;
+   width: 400%;
+}
+
+.slides input{
+    display: none; 
+}
+
+.slide { 
+   transition: 2s;
+   width: 25%;
+}
+
+.slide img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* css for manual slide navigation */
+
+.navigation-manual, .navigation-auto {
+    align-items: center;
+    bottom: 15px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.manual-btn, .navigation-auto div {
+    border-radius: 50%;
+    border: 2px solid hsla(52, 94%, 94%, 1);
+    cursor: pointer;
+    height: 12px;
+    transition: background 0.3s ease;
+    width: 12px;
+ }
+
+.manual-btn:hover{
+    background: #CB0639;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+/* css for automatic navigation */
+
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #CB0639;
+}
+
+.welkom {
+    margin: 40px 0;
+    width: 1000px;
+}
+
+.welkom ul {
+    margin: 40px 0;
+}
+
+.members {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+blockquote {
+    margin: 40px 0 40px 0;
+    text-align: center;
+}
+
+.profiel {
+   max-width: 100px;
+   border-radius: 50%;
+   height: auto;
+   margin: 50px;
+   vertical-align: middle;
+}
+
+/* footer */
+
+footer .wrapper {
+    padding: 20px 0; 
+}
+
+footer small {
+    color: #ff4632;
+}
+
+footer .social_icons {
+    align-items: center;
+    display: flex;
+    grid-column: 3 / 4;
+    justify-content: end;
+ }
+ 
+ footer .social_icons ul {
+    color: #ff4632;
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+    list-style: none;
+    padding: 0;
+ }
+
+/*  --- Aanbod.html --- */
+
+.intro_img {
+    margin: 20px 0 40px 0;
+    width: 1024px;
+}
+
+.cursus_aanbod {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    margin: 40px 0;
+}
+
+.cursus_aanbod > div {
+    display: contents; 
+}
+
+.cursus_aanbod h3, p {
+    grid-column: 1 / 2; /* Eerste kolom */
+}
+
+.cursus_aanbod ul {
+    grid-column: 2 / 3; /* Tweede kolom */
+}
+
+/*  --- Detail.html --- */
+
+.cursus_detail {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 40px; 
+    margin: 40px;
+}
+
+#cursus1,
+#cursus2,
+#cursus3,
+#cursus4 {
+    margin: 40px 0;
+}
+
+.contact-form,
+.contact_form  {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    width: 100%; 
+    margin-bottom: 30px;
+
+}
+
+.contact-form p,
+.contact_form p {
+    display: flex;
+    flex-direction: column; 
+    margin: 0; 
+}
+
+.contact-form label,
+.contact_form label {
+    font-size: 16px; 
+    margin: 20px 0 10px 0; 
+}
+
+.contact-form select,
+.contact-form input,
+.contact_form input,
+.contact-form textarea,
+.contact_form textarea {
+    width: 70%; 
+    max-width: 400px; 
+    padding: 8px; 
+    font-size: 14px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box;
+}
+
+.contact-form select {
+    width: 400px;
+}
+
+.contact-form textarea,
+.contact_form textarea {
+    resize: none; 
+    height: 100px; 
+}
+
+.button,
+.contact-form button,
+.contact_form button{
+    display: inline-block;
+    color: #ff5733; 
+    background-color: #232531; 
+    border: 2px solid #3f4046;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 10px 0px;
+}
+
+.button:hover,
+.contact-form button:hover,
+.contact_form button:hover {
+    background-color: #232531; 
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+/*  --- Contact.html --- */
+
+#contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact_form {
+    grid-column: 1 / 2;
+}
+
+.addres {
+    grid-column: 2 / 3;
+    justify-self: end;
+    text-align: right;
+}
+
+iframe {
+    width: 80%;
+    height: 400px;
+    justify-self: center;
+    grid-column: span 2;
+    margin: 40px 0;
+}
+
+.partner {
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    max-width: 100%;
+    margin: 40px auto;
+}
+
+.blog {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.bloginhoud {
+    text-align: center; 
+    max-width: 300px; 
+}
+
+.bloginhoud img {
+    width: 100%; 
+    border-radius: 10px; 
+}
+
+.blog1:hover,
+.blog2:hover,
+.blog3:hover {
+    transform: scale(1.05); /* Vergroot de afbeelding iets */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Voeg een soepele overgang toe */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Voeg een schaduw toe */
+}
+
+.tags {
+    font-style: italic;
+    font-size: 12px;  
+}
