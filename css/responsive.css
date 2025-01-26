@@ -99,6 +99,7 @@
    .cursus_aanbod {
       display: grid;
       grid-template-columns: 1fr;
+      margin: 0 40px;
    }
 
    .cursus_detail {
@@ -126,7 +127,7 @@
 
    .contact-form button,
    .contact_form button {
-      margin: 0 auto;
+      margin: 0;
    }
 
    #contact {
