@@ -306,6 +306,20 @@
                         <button type="submit" class="btn-cta">Inschrijven</button>
                     </p>
                 </form>
+                <a href="detail.html#mainmenu" class="button_top">Top</a>
+                 <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                    const buttonTop = document.querySelector(".button_top");
+                
+                    buttonTop.addEventListener("click", function (event) {
+                        event.preventDefault(); 
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        });
+                    });
+                });
+                 </script>
             </div>
         </div>
     </main>

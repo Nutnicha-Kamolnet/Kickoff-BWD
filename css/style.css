@@ -16,6 +16,10 @@ body {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 p {
     color: #fff;
     font-weight: 300;
@@ -422,6 +426,7 @@ footer .social_icons {
 }
 
 .button,
+.button_top,
 .contact-form button,
 .contact_form button{
     background-color: #232531; 
@@ -441,11 +446,17 @@ footer .social_icons {
 }
 
 .button:hover,
+.button_top:hover,
 .contact-form button:hover,
 .contact_form button:hover {
     background-color: #232531; 
     color: #fff;
     transition: color 0.3s ease;
+}
+
+.button_top {
+    float: right;
+    margin: 20px;
 }
 
 /*  --- Contact.html --- */
