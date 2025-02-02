@@ -18,9 +18,9 @@
    }
 
    .topbar {
+      align-items: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
       min-width: 400px;
    }
@@ -31,9 +31,9 @@
    }
 
    nav {
+      align-items: center;
       display: flex;
       justify-content: center;
-      align-items: center;
       margin: 20px 0 0 0;
    }
 
@@ -50,9 +50,9 @@
    }
 
    .slider {
+      margin: 0 auto;
       padding: 40px 0 0 0;
       width: 100%;
-      margin: 0 auto;
    }
 
    .welkom {
@@ -74,10 +74,10 @@
    }
 
    footer .wrapper {
-      text-align: center;
+      align-items: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      text-align: center;
    }
 
    footer small {
@@ -91,9 +91,9 @@
    /* aanbod.html */
 
    .intro_img {
-      width: 100%;
       height: auto;
       padding: 20px 0;
+      width: 100%;
    }
 
    .cursus_aanbod {
@@ -138,21 +138,21 @@
    }
 
    .addres {
+      margin-bottom: 20px;
       order: 1;
       text-align: left;
-      margin-bottom: 20px;
    }
 
    iframe {
+      margin: 0 auto;
       order: 2;
       width: 90%;
-      margin: 0 auto;
    }
 
    .contact_form {
+      margin: 0 20px;
       order: 3;
       width: 90%;
-      margin: 0 20px;
    }
 }
 
@@ -165,10 +165,10 @@
    }
 
    .topbar {
+      align-items: center;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
       min-width: 700px;
    }
 
@@ -177,9 +177,9 @@
    }
 
    .intro_img {
-      width: 100%;
       height: auto;
       margin: 10px 0 10px 0;
+      width: 100%;
    }
 
    nav {
@@ -204,38 +204,39 @@
 
    .cursus_aanbod {
       display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 20px;
+      grid-template-columns: 1fr 1fr;
       margin: 40px 0;
    }
 
    #contact {
       display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 20px;
+      grid-template-columns: 1fr 1fr;
    }
 
    .addres {
+      margin-bottom: 20px;
       order: 1;
       text-align: left;
-      margin-bottom: 20px;
    }
 
    iframe {
+      margin: 40px auto;
       order: 2;
       width: 90%;
-      margin: 40px auto;
    }
 
    .contact_form {
+      margin: 0 20px;
       order: 1;
       width: 90%;
-      margin: 0 20px;
    }
 
 }
 
 @media (min-width: 1000px) {
+
    header .wrapper,
    main .wrapper,
    footer .wrapper {
@@ -256,44 +257,44 @@
    }
 
    .cursus_detail {
-      display: flex; 
-      justify-content: space-between; 
-      align-items: flex-start; 
-      gap: 40px; 
+      align-items: flex-start;
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
       margin: 40px 0;
-  }
+   }
 
-  .left-section {
-   max-width: 55%;
+   .left-section {
+      max-width: 55%;
    }
 
    footer .wrapper {
-      width: 1000px;
-      padding: 20px 0; 
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       margin: 0 auto;
-  }
+      padding: 20px 0;
+      width: 1000px;
+   }
 
-  footer small {
-   color: #ff4632;
-   padding: 20px 0 0 0;
-}
+   footer small {
+      color: #ff4632;
+      padding: 20px 0 0 0;
+   }
 
-  footer .social_icons {
-   align-items: center;
-   display: flex;
-   grid-column: 3 / 4;
-   justify-content: center;
-}
+   footer .social_icons {
+      align-items: center;
+      display: flex;
+      grid-column: 3 / 4;
+      justify-content: center;
+   }
 
-footer .social_icons ul {
-   color: #ff4632;
-   display: flex;
-   gap: 15px;
-   font-size: 24px;
-   list-style: none;
-   padding: 0;
-}
+   footer .social_icons ul {
+      color: #ff4632;
+      display: flex;
+      font-size: 24px;
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+   }
 }
